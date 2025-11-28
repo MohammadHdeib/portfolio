@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --bg-overlay: rgba(15, 23, 42, 0.55);  /* lighter overlay */
-      --panel-bg: rgba(15, 23, 42, 0.82);    /* lighter panel */
+      --bg-overlay: rgba(15, 23, 42, 0.55);
+      --panel-bg: rgba(15, 23, 42, 0.82);
       --text: #e5e7eb;
       --muted: #9ca3af;
       --accent: #f9fafb;
@@ -16,20 +16,32 @@
     }
     * { box-sizing: border-box; }
 
+    /* ===== Outer background (yellow area) ===== */
     body {
       margin: 0;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
       color: var(--text);
-      /* wood background, no heavy dark gradient directly on it */
+      font-size: 17px; /* slightly bigger base font */
+
+      /* simple automation/electricity theme:
+         - dark base
+         - faint diagonal grid lines
+         - soft cyan & orange glows */
       background:
-        url("https://mohammadhdeib.carrd.co/assets/images/image00.jpg?v=04e134da")
-        center/cover fixed no-repeat;
+        radial-gradient(circle at top left, rgba(56,189,248,0.16), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(249,115,22,0.16), transparent 55%),
+        repeating-linear-gradient(
+          135deg,
+          #020617 0px,
+          #020617 4px,
+          #030712 4px,
+          #030712 12px
+        );
     }
 
     .page {
       min-height: 100vh;
       padding: 40px 16px 56px;
-      /* softer dark overlay than before */
       background: linear-gradient(to bottom, var(--bg-overlay), rgba(15,23,42,0.75));
       display: flex;
       justify-content: center;
@@ -51,14 +63,14 @@
     }
     .panel-header h1 {
       margin: 0 0 6px;
-      font-size: 1.9rem;
-      letter-spacing: 0.06em;
+      font-size: 2.1rem;           /* bigger */
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
     .panel-header .underline {
-      width: 70px;
+      width: 80px;
       height: 2px;
-      background: rgba(248, 250, 252, 0.85);
+      background: rgba(248, 250, 252, 0.9);
       margin: 10px auto 0;
       border-radius: 999px;
     }
@@ -84,27 +96,27 @@
     /* Left column */
     .project-left { text-transform: none; }
     .project-title {
-      font-size: 0.95rem;
-      letter-spacing: 0.16em;
+      font-size: 1.05rem;          /* bigger */
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .project-desc {
-      font-size: 0.9rem;
+      font-size: 0.98rem;          /* bigger */
       color: var(--muted);
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       max-width: 480px;
     }
     .project-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 9px 28px;
+      padding: 10px 32px;
       border-radius: 999px;
       border: 1px solid var(--button-border);
       color: var(--accent);
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
+      font-size: 0.9rem;           /* bigger */
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       text-decoration: none;
       background: transparent;
@@ -132,22 +144,22 @@
       overflow: hidden;
     }
 
-    /* Text + logo in one line, like Carrd */
+    /* Text + logo line (like Carrd) */
     .meta-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      gap: 8px;
+      gap: 10px;
     }
     .project-meta {
-      font-size: 0.82rem;
+      font-size: 0.9rem;           /* a bit bigger */
       color: var(--muted);
       white-space: nowrap;
     }
     .flag {
-      width: 40px;
-      height: 40px;
+      width: 46px;                 /* bigger logo */
+      height: 46px;
       border-radius: 999px;
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
@@ -159,7 +171,7 @@
       margin-top: 36px;
       padding-top: 18px;
       border-top: 1px solid rgba(148, 163, 184, 0.35);
-      font-size: 0.88rem;
+      font-size: 0.95rem;
       color: var(--muted);
       display: flex;
       flex-wrap: wrap;
