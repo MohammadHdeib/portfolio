@@ -98,6 +98,42 @@
     li {
       margin-bottom: 4px;
     }
+    /* Header layout */
+    .header-row {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .avatar-wrapper {
+      flex-shrink: 0;
+    }
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+    .header-text {
+      flex: 1;
+      min-width: 220px;
+    }
+    .location-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .flag {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      object-fit: cover;
+    }
+
     /* Featured projects */
     .projects-grid {
       display: grid;
@@ -117,6 +153,14 @@
       flex-direction: column;
       height: 100%;
     }
+    .project-image {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      max-height: 120px;
+      display: block;
+      margin-bottom: 8px;
+    }
     .project-title {
       font-size: 0.95rem;
       font-weight: 600;
@@ -125,7 +169,7 @@
     .project-sub {
       font-size: 0.8rem;
       color: var(--muted);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .project-body {
       font-size: 0.85rem;
@@ -135,9 +179,20 @@
     .project-meta {
       font-size: 0.8rem;
       color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .project-meta img.flag {
+      margin-left: 4px;
+    }
+    .project-logo {
+      height: 18px;
+      object-fit: contain;
     }
     .project-link {
-      margin-top: 8px;
+      margin-top: 6px;
       font-size: 0.8rem;
       color: var(--accent);
       text-decoration: none;
@@ -145,6 +200,7 @@
     .project-link:hover {
       text-decoration: underline;
     }
+
     /* Detailed project blocks */
     .tag-row {
       display: flex;
@@ -165,6 +221,13 @@
       font-size: 0.82rem;
       color: var(--muted);
       margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .meta-line img.flag {
+      margin-left: 4px;
     }
     .back-top {
       font-size: 0.8rem;
@@ -177,6 +240,23 @@
     .back-top a:hover {
       text-decoration: underline;
     }
+
+    /* Image galleries */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .gallery img {
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      max-width: 100%;
+      height: auto;
+      flex: 1 1 150px;
+      object-fit: cover;
+    }
+
     /* Footer / contact */
     .contact-row {
       display: flex;
@@ -209,17 +289,36 @@
     <!-- Header / Name -->
     <section class="card">
       <div class="section-label">Profile</div>
-      <h1>Mohammad Hdeib</h1>
-      <div class="subtitle">Industrial Automation & Electrical Engineer</div>
-      <p style="font-size:0.92rem;">
-        Experienced in industrial automation, instrumentation, and electrical power quality. I focus on
-        <strong>system integration</strong>, combining control design, PLC/SCADA, and detailed EPLAN engineering to deliver
-        complete solutions for process plants and machinery.
-      </p>
-      <p style="font-size:0.92rem;">
-        My objective is to contribute to teams and companies that value <strong>practical engineering</strong>, clean
-        documentation, and modern automation technologies.
-      </p>
+      <div class="header-row">
+        <div class="avatar-wrapper">
+          <img
+            src="https://mohammadhdeib.carrd.co/assets/images/image03.jpg?v=04e134da"
+            alt="Portrait of Mohammad Hdeib"
+            class="avatar"
+          />
+        </div>
+        <div class="header-text">
+          <h1>Mohammad Hdeib</h1>
+          <div class="subtitle">Industrial Automation &amp; Electrical Engineer</div>
+          <p style="font-size:0.92rem;">
+            Experienced in industrial automation, instrumentation, and electrical power quality. I focus on
+            <strong>system integration</strong>, combining control design, PLC/SCADA, and detailed EPLAN engineering
+            to deliver complete solutions for process plants and machinery.
+          </p>
+          <p style="font-size:0.92rem;">
+            My objective is to apply my expertise in environments that value <strong>practical engineering</strong>,
+            clean documentation, and modern automation technologies.
+          </p>
+          <div class="location-flag">
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image08.png?v=04e134da"
+              alt="Jordan flag"
+              class="flag"
+            />
+            <span>Based in Jordan · Open to remote and international projects</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Technical skills -->
@@ -231,13 +330,13 @@
         Low-voltage system design · P&amp;ID interpretation
       </p>
       <div class="divider"></div>
-      <p class="section-label">Managerial & Communication</p>
+      <p class="section-label">Managerial &amp; Communication</p>
       <p>
-        Sales & negotiation · Team leadership · Project and product value estimation · Knowledge of Jordanian and
+        Sales &amp; negotiation · Team leadership · Project and product value estimation · Knowledge of Jordanian and
         Middle East industrial market
       </p>
       <div class="divider"></div>
-      <p class="section-label">Software & Tools</p>
+      <p class="section-label">Software &amp; Tools</p>
       <p>
         Microsoft Office · CX-ONE Omron · Sysmac Studio · TIA Portal · EPLAN · AutoCAD · SQL Server · ABB e-Design ·
         Siemens SIMARIS · Ecodial · RSLogix 5000
@@ -261,45 +360,90 @@
       <div class="projects-grid">
         <!-- Project 1 summary -->
         <article class="project-card">
+          <img
+            src="https://mohammadhdeib.carrd.co/assets/images/image01.jpg?v=04e134da"
+            alt="Al Quds Paints plant"
+            class="project-image"
+          />
           <div class="section-label" style="margin-bottom:4px;">Process Plant</div>
           <div class="project-title">Emulsion Paints Plant Automation</div>
-          <div class="project-sub">Complete electrical & control system design</div>
+          <div class="project-sub">Complete electrical &amp; control system design</div>
           <p class="project-body">
             Designed the full control architecture and electrical panels for a fully automated emulsion paint plant,
             including remote I/O, network topology, and industrial communication.
           </p>
           <div class="project-meta">
-            Al Quds Paints · Amman, Jordan
+            <span>Al Quds Paints · Jordan</span>
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image09.png?v=04e134da"
+              alt="Quds Paints logo"
+              class="project-logo"
+            />
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image08.png?v=04e134da"
+              alt="Jordan flag"
+              class="flag"
+            />
           </div>
           <a href="#proj-emulsion" class="project-link">View details ↓</a>
         </article>
 
         <!-- Project 2 summary -->
         <article class="project-card">
+          <img
+            src="https://mohammadhdeib.carrd.co/assets/images/image02.jpg?v=04e134da"
+            alt="Cemonite facility"
+            class="project-image"
+          />
           <div class="section-label" style="margin-bottom:4px;">Cement / VRM</div>
           <div class="project-title">Cemonite Vertical Roller Mill</div>
-          <div class="project-sub">P&amp;ID & VFD panel engineering</div>
+          <div class="project-sub">P&amp;ID &amp; VFD panel engineering</div>
           <p class="project-body">
             Contributed to a next-generation cement factory with detailed P&amp;ID design and VFD panel engineering,
             delivering complete packages for manufacturing and construction.
           </p>
           <div class="project-meta">
-            Cemonite · Sola, Norway
+            <span>Cemonite · Norway</span>
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image20.jpg?v=04e134da"
+              alt="Cemonite logo"
+              class="project-logo"
+            />
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image22.png?v=04e134da"
+              alt="Norway flag"
+              class="flag"
+            />
           </div>
           <a href="#proj-vrm" class="project-link">View details ↓</a>
         </article>
 
         <!-- Project 3 summary -->
         <article class="project-card">
+          <img
+            src="https://mohammadhdeib.carrd.co/assets/images/image05.jpg?v=04e134da"
+            alt="Team Power Solutions building"
+            class="project-image"
+          />
           <div class="section-label" style="margin-bottom:4px;">Field Test</div>
           <div class="project-title">Feasibility Field Test – Advanced Exploration</div>
-          <div class="project-sub">EPLAN & panel design support</div>
+          <div class="project-sub">EPLAN &amp; panel design support</div>
           <p class="project-body">
             Supported a Canadian field test project with electrical design based on P&amp;ID and SLD, including
             EPLAN schematics and 3D Pro Panel modeling.
           </p>
           <div class="project-meta">
-            Team Power Solutions · Saskatchewan, Canada
+            <span>Team Power Solutions · Canada</span>
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image24.png?v=04e134da"
+              alt="Team Power Solutions logo"
+              class="project-logo"
+            />
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image23.png?v=04e134da"
+              alt="Canada flag"
+              class="flag"
+            />
           </div>
           <a href="#proj-fieldtest" class="project-link">View details ↓</a>
         </article>
@@ -314,14 +458,23 @@
         <span class="tag">Complete automation design</span>
         <span class="tag">EPLAN &amp; AutoCAD</span>
       </div>
-      <p class="meta-line"><strong>Client:</strong> Al Quds Paints Industry</p>
-      <p class="meta-line"><strong>Location:</strong> Amman, Jordan</p>
+      <p class="meta-line">
+        <strong>Client:</strong> Al Quds Paints Industry
+      </p>
+      <p class="meta-line">
+        <strong>Location:</strong> Amman, Jordan
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image08.png?v=04e134da"
+          alt="Jordan flag"
+          class="flag"
+        />
+      </p>
       <p class="meta-line"><strong>Industry:</strong> Chemicals / Paints</p>
       <p class="meta-line"><strong>Date:</strong> December 2024</p>
       <div class="divider"></div>
       <p>
-        Responsible for the complete design and engineering of the industrial automation system for a fully automated
-        emulsion paint plant. This included:
+        Responsible for the complete design and engineering of the industrial automation system for a fully
+        automated emulsion paint plant. This included:
       </p>
       <ul>
         <li>Electrical control panel design: layouts, schematics, power distribution, and component selection.</li>
@@ -333,9 +486,54 @@
         <li>Design prepared for clean commissioning, troubleshooting, and future expansion.</li>
       </ul>
       <p>
-        Worked closely with cross-functional teams (software, commissioning, project management) to deliver a robust
-        and scalable automation solution.
+        Worked closely with cross-functional teams (software, commissioning, project management) to deliver a robust,
+        scalable automation solution.
       </p>
+
+      <!-- Gallery: plant + EPLAN work -->
+      <div class="gallery">
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image06.jpg?v=04e134da"
+          alt="Paint plant process area"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image10.jpg?v=04e134da"
+          alt="MCC 3D layout view 1"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image11.jpg?v=04e134da"
+          alt="MCC 3D layout view 2"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image12.jpg?v=04e134da"
+          alt="Control panel 3D layout"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image13.jpg?v=04e134da"
+          alt="Control panel 3D layout variant"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image14.jpg?v=04e134da"
+          alt="HMI panel 3D layout"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image16.jpg?v=04e134da"
+          alt="VFD panel overview"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image17.jpg?v=04e134da"
+          alt="I/O overview"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image18.jpg?v=04e134da"
+          alt="Terminal overview"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image19.jpg?v=04e134da"
+          alt="Relay overview"
+        />
+      </div>
+
       <p class="back-top"><a href="#top">↑ Back to top</a></p>
     </section>
 
@@ -347,8 +545,17 @@
         <span class="tag">VFD control panels</span>
         <span class="tag">Manufacturing data</span>
       </div>
-      <p class="meta-line"><strong>Client:</strong> Cemonite</p>
-      <p class="meta-line"><strong>Location:</strong> Sola, Norway</p>
+      <p class="meta-line">
+        <strong>Client:</strong> Cemonite
+      </p>
+      <p class="meta-line">
+        <strong>Location:</strong> Sola, Norway
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image22.png?v=04e134da"
+          alt="Norway flag"
+          class="flag"
+        />
+      </p>
       <p class="meta-line"><strong>Industry:</strong> Cement / Eco-concrete</p>
       <p class="meta-line"><strong>Date:</strong> June 2023 – December 2023</p>
       <div class="divider"></div>
@@ -367,6 +574,23 @@
         The project contributed to Cemonite’s green innovation goals by enabling automated production of eco-friendly
         building materials.
       </p>
+
+      <!-- Gallery: VRM plant + logo -->
+      <div class="gallery">
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image07.jpg?v=04e134da"
+          alt="Cemonite VRM process hall"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image02.jpg?v=04e134da"
+          alt="Cemonite facility exterior"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image20.jpg?v=04e134da"
+          alt="Cemonite logo"
+        />
+      </div>
+
       <p class="back-top"><a href="#top">↑ Back to top</a></p>
     </section>
 
@@ -378,8 +602,17 @@
         <span class="tag">EPLAN 2022</span>
         <span class="tag">3D Pro Panel</span>
       </div>
-      <p class="meta-line"><strong>Client:</strong> Team Power Solutions</p>
-      <p class="meta-line"><strong>Location:</strong> Saskatchewan, Canada</p>
+      <p class="meta-line">
+        <strong>Client:</strong> Team Power Solutions
+      </p>
+      <p class="meta-line">
+        <strong>Location:</strong> Saskatchewan, Canada
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image23.png?v=04e134da"
+          alt="Canada flag"
+          class="flag"
+        />
+      </p>
       <p class="meta-line"><strong>Industry:</strong> Engineering Solutions / Exploration</p>
       <p class="meta-line"><strong>Date:</strong> June 2022</p>
       <div class="divider"></div>
@@ -387,7 +620,7 @@
         Contributed to the electrical design of a field testing project, supporting advanced exploration systems.
       </p>
       <ul>
-        <li>Developed electrical schematics based on project P&amp;ID and single line diagram (SLD).</li>
+        <li>Developed electrical schematics based on project P&amp;ID and Single Line Diagram (SLD).</li>
         <li>Created EPLAN 2022 schematics aligned with process and power requirements.</li>
         <li>Prepared custom terminal and connection reports to streamline wiring and field work.</li>
         <li>Modeled the electrical control panel in 3D using EPLAN Pro Panel.</li>
@@ -397,6 +630,23 @@
         The focus was on producing manufacturing-ready designs that connected engineering intent with practical,
         on-site execution.
       </p>
+
+      <!-- Gallery: field test site + logo -->
+      <div class="gallery">
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image04.jpg?v=04e134da"
+          alt="Field test site landscape"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image05.jpg?v=04e134da"
+          alt="Team Power Solutions building"
+        />
+        <img
+          src="https://mohammadhdeib.carrd.co/assets/images/image24.png?v=04e134da"
+          alt="Team Power Solutions logo"
+        />
+      </div>
+
       <p class="back-top"><a href="#top">↑ Back to top</a></p>
     </section>
 
