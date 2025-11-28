@@ -12,7 +12,7 @@
 
   <style>
     :root {
-      --panel-bg: rgba(15, 23, 42, 0.88);
+      --panel-bg: rgba(15, 23, 42, 0.9);
       --text: #e5e7eb;
       --muted: #cbd5f5;
       --accent: #f9fafb;
@@ -21,18 +21,22 @@
 
     * { box-sizing: border-box; }
 
-    /* ==== PAGE BACKGROUND ==== */
+    /* ===== PAGE BACKGROUND (you can change image later) ===== */
     body {
       margin: 0;
-      font-family: "Raleway", sans-serif;
+      font-family: "Raleway", system-ui, -apple-system, "Segoe UI", sans-serif;
       color: var(--text);
+      font-size: 17px;
 
       background:
-        linear-gradient(rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.35)),
+        linear-gradient(
+          rgba(15, 23, 42, 0.35),
+          rgba(15, 23, 42, 0.35)
+        ),
         url("desk-bg.jpg") center/cover fixed no-repeat;
     }
 
-    /* ==== WRAPPER ==== */
+    /* ===== MAIN WRAPPER ===== */
     .page {
       min-height: 100vh;
       padding: 60px 16px 80px;
@@ -40,36 +44,36 @@
       justify-content: center;
     }
 
-    /* ==== CENTRAL PANEL ==== */
+    /* ===== CENTRAL PANEL ===== */
     .panel {
       width: 100%;
-      max-width: 1150px;
+      max-width: 1350px;       /* wider like Carrd */
       background: var(--panel-bg);
-      border-radius: 24px;
-      padding: 48px 42px 52px;
-      box-shadow: 0 28px 70px rgba(0,0,0,0.55);
+      border-radius: 22px;
+      padding: 48px 48px 56px;
+      box-shadow: 0 26px 70px rgba(0,0,0,0.55);
     }
 
-    /* ==== HEADER ==== */
+    /* ===== HEADER ===== */
     .panel-header {
       text-align: center;
       margin-bottom: 56px;
     }
     .panel-header h1 {
       margin: 0;
-      font-size: 2.4rem;
-      letter-spacing: 0.28em;
+      font-size: 2.8rem;       /* bigger heading */
+      letter-spacing: 0.35em;  /* strong tracking like Carrd */
       text-transform: uppercase;
     }
     .panel-header .underline {
-      width: 70px;
+      width: 90px;
       height: 2px;
-      background: white;
+      background: rgba(248, 250, 252, 0.9);
       margin: 14px auto 0;
       border-radius: 999px;
     }
 
-    /* ==== PROJECT LIST ==== */
+    /* ===== PROJECT LIST ===== */
     .projects {
       display: flex;
       flex-direction: column;
@@ -78,50 +82,53 @@
     .project-row {
       display: grid;
       grid-template-columns: 1.4fr 1fr;
-      gap: 70px;                /* big spacing like Carrd */
+      gap: 80px;                 /* big gap between text and image */
       align-items: center;
-      padding: 90px 0;          /* MUCH taller sections */
-      border-top: 1px solid rgba(255,255,255,0.15);
-      min-height: 420px;        /* section almost half screen */
+      padding: 100px 0;          /* tall sections */
+      border-top: 1px solid rgba(255,255,255,0.18);
+      min-height: 460px;         /* Carrd-like section height */
     }
     .project-row:first-child {
       border-top: none;
       padding-top: 40px;
     }
 
-    /* ==== LEFT SIDE ==== */
+    /* ===== LEFT SIDE ===== */
     .project-title {
-      font-size: 1.2rem;
-      letter-spacing: 0.34em;
+      font-size: 1.25rem;        /* bigger */
+      letter-spacing: 0.32em;
       text-transform: uppercase;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
     .project-desc {
+      font-size: 1.05rem;        /* slightly larger body text */
       color: var(--muted);
-      font-size: 1rem;
       line-height: 1.75;
-      max-width: 540px;
-      margin-bottom: 28px;
+      max-width: 580px;
+      margin-bottom: 32px;
     }
 
     .project-button {
-      padding: 12px 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 42px;
       border-radius: 999px;
       border: 1px solid var(--button-border);
       color: var(--accent);
-      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
-      font-size: 0.85rem;
-      letter-spacing: 0.24em;
-      transition: 0.2s ease;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.1s ease;
     }
     .project-button:hover {
-      background: rgba(255,255,255,0.12);
+      background: rgba(248, 250, 252, 0.12);
       transform: translateY(-1px);
     }
 
-    /* ==== RIGHT SIDE ==== */
+    /* ===== RIGHT SIDE ===== */
     .project-right {
       display: flex;
       flex-direction: column;
@@ -130,11 +137,11 @@
 
     .project-image {
       width: 100%;
-      height: 300px;       /* large Carrd-style banner */
+      height: 300px;             /* banner-style image */
       object-fit: cover;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,0.18);
-      box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     }
 
     .meta-row {
@@ -152,11 +159,11 @@
       width: 52px;
       height: 52px;
       border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.55);
       object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.55);
     }
 
-    /* ==== FOOTER ==== */
+    /* ===== FOOTER ===== */
     .contact {
       margin-top: 60px;
       padding-top: 24px;
@@ -166,30 +173,39 @@
       font-size: 0.95rem;
     }
     .contact a {
-      color: white;
+      color: var(--accent);
       text-decoration: none;
     }
 
-    /* ==== MOBILE ==== */
+    /* ===== MOBILE ===== */
     @media (max-width: 900px) {
+      body {
+        background-attachment: scroll;
+      }
+      .panel {
+        padding: 28px 18px 32px;
+      }
       .project-row {
         grid-template-columns: 1fr;
         gap: 32px;
         padding: 60px 0;
         min-height: auto;
       }
-      .project-right { order: -1; }
-      .project-image { height: 220px; }
+      .project-right {
+        order: -1;
+      }
+      .project-image {
+        height: 220px;
+      }
     }
   </style>
 </head>
-
 <body>
   <div class="page">
     <div class="panel">
 
       <header class="panel-header">
-        <h1>FEATURED PROJECTS</h1>
+        <h1>Featured Projects</h1>
         <div class="underline"></div>
       </header>
 
@@ -198,7 +214,7 @@
         <!-- Project 1 -->
         <article class="project-row">
           <div>
-            <div class="project-title">EMULATION PAINTS PLANT AUTOMATION</div>
+            <div class="project-title">Emulation Paints Plant Automation</div>
             <div class="project-desc">
               Complete electrical and control system design for a fully automated emulsion paint plant.
             </div>
@@ -206,12 +222,18 @@
           </div>
 
           <div class="project-right">
-            <img src="https://mohammadhdeib.carrd.co/assets/images/image01.jpg?v=04e134da"
-                 class="project-image" />
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image01.jpg?v=04e134da"
+              alt="Al Quds Paints plant"
+              class="project-image"
+            />
             <div class="meta-row">
               <div class="project-meta">Al Quds Paints · Jordan</div>
-              <img src="https://mohammadhdeib.carrd.co/assets/images/image08.png?v=04e134da"
-                   class="flag" />
+              <img
+                src="https://mohammadhdeib.carrd.co/assets/images/image08.png?v=04e134da"
+                alt="Jordan flag"
+                class="flag"
+              />
             </div>
           </div>
         </article>
@@ -219,7 +241,7 @@
         <!-- Project 2 -->
         <article class="project-row">
           <div>
-            <div class="project-title">CEMONITE VERTICAL ROLLER MILL</div>
+            <div class="project-title">Cemonite Vertical Roller Mill</div>
             <div class="project-desc">
               P&amp;ID design and VFD control panel engineering for a next-generation cement factory,
               including full manufacturing data and cross-team coordination.
@@ -228,12 +250,18 @@
           </div>
 
           <div class="project-right">
-            <img src="https://mohammadhdeib.carrd.co/assets/images/image02.jpg?v=04e134da"
-                 class="project-image" />
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image02.jpg?v=04e134da"
+              alt="Cemonite plant"
+              class="project-image"
+            />
             <div class="meta-row">
               <div class="project-meta">Cemonite · Norway</div>
-              <img src="https://mohammadhdeib.carrd.co/assets/images/image22.png?v=04e134da"
-                   class="flag" />
+              <img
+                src="https://mohammadhdeib.carrd.co/assets/images/image22.png?v=04e134da"
+                alt="Norway flag"
+                class="flag"
+              />
             </div>
           </div>
         </article>
@@ -241,21 +269,27 @@
         <!-- Project 3 -->
         <article class="project-row">
           <div>
-            <div class="project-title">FEASIBILITY FIELD TEST – ADVANCED EXPLORATION</div>
+            <div class="project-title">Feasibility Field Test – Advanced Exploration</div>
             <div class="project-desc">
               EPLAN &amp; 3D Pro Panel design for an advanced exploration field-testing system,
-              supporting clear documentation and build-ready layouts.
+              supporting clear documentation and build-ready panel layouts.
             </div>
             <a href="proj-fieldtest.html" class="project-button">More</a>
           </div>
 
           <div class="project-right">
-            <img src="https://mohammadhdeib.carrd.co/assets/images/image05.jpg?v=04e134da"
-                 class="project-image" />
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image05.jpg?v=04e134da"
+              alt="Field test site"
+              class="project-image"
+            />
             <div class="meta-row">
               <div class="project-meta">Team Power Solutions · Canada</div>
-              <img src="https://mohammadhdeib.carrd.co/assets/images/image23.png?v=04e134da"
-                   class="flag" />
+              <img
+                src="https://mohammadhdeib.carrd.co/assets/images/image23.png?v=04e134da"
+                alt="Canada flag"
+                class="flag"
+              />
             </div>
           </div>
         </article>
