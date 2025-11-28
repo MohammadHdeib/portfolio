@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --bg-overlay: rgba(10, 18, 28, 0.78);
-      --panel-bg: rgba(15, 23, 42, 0.9);
+      --bg-overlay: rgba(15, 23, 42, 0.55);  /* lighter overlay */
+      --panel-bg: rgba(15, 23, 42, 0.82);    /* lighter panel */
       --text: #e5e7eb;
       --muted: #9ca3af;
       --accent: #f9fafb;
@@ -20,8 +20,8 @@
       margin: 0;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
       color: var(--text);
+      /* wood background, no heavy dark gradient directly on it */
       background:
-        linear-gradient(to bottom right, rgba(15,23,42,0.9), rgba(30,64,175,0.4)),
         url("https://mohammadhdeib.carrd.co/assets/images/image00.jpg?v=04e134da")
         center/cover fixed no-repeat;
     }
@@ -29,7 +29,8 @@
     .page {
       min-height: 100vh;
       padding: 40px 16px 56px;
-      background: linear-gradient(to bottom, var(--bg-overlay), rgba(15,23,42,0.9));
+      /* softer dark overlay than before */
+      background: linear-gradient(to bottom, var(--bg-overlay), rgba(15,23,42,0.75));
       display: flex;
       justify-content: center;
     }
@@ -39,8 +40,8 @@
       max-width: 1080px;
       background: var(--panel-bg);
       border-radius: 18px;
-      border: 1px solid rgba(15,23,42,0.9);
-      box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+      border: 1px solid rgba(15,23,42,0.85);
+      box-shadow: 0 26px 70px rgba(0,0,0,0.45);
       padding: 32px 24px 36px;
     }
 
@@ -57,7 +58,7 @@
     .panel-header .underline {
       width: 70px;
       height: 2px;
-      background: rgba(248, 250, 252, 0.8);
+      background: rgba(248, 250, 252, 0.85);
       margin: 10px auto 0;
       border-radius: 999px;
     }
@@ -81,9 +82,7 @@
     }
 
     /* Left column */
-    .project-left {
-      text-transform: none;
-    }
+    .project-left { text-transform: none; }
     .project-title {
       font-size: 0.95rem;
       letter-spacing: 0.16em;
@@ -129,28 +128,33 @@
       object-fit: cover;
       max-height: 190px;
       border: 1px solid rgba(15,23,42,0.7);
-      box-shadow: 0 14px 35px rgba(0,0,0,0.5);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.45);
       overflow: hidden;
+    }
+
+    /* Text + logo in one line, like Carrd */
+    .meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 8px;
     }
     .project-meta {
       font-size: 0.82rem;
       color: var(--muted);
-    }
-    .country-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 4px;
+      white-space: nowrap;
     }
     .flag {
-      width: 28px;
-      height: 28px;
+      width: 40px;
+      height: 40px;
       border-radius: 999px;
       object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      flex-shrink: 0;
     }
 
-    /* Footer contact */
+    /* Contact */
     .contact {
       margin-top: 36px;
       padding-top: 18px;
@@ -180,6 +184,9 @@
       .project-right {
         order: -1;
       }
+      .meta-row {
+        justify-content: flex-start;
+      }
     }
   </style>
 </head>
@@ -208,8 +215,8 @@
               alt="Al Quds Paints plant"
               class="project-image"
             />
-            <div class="project-meta">Al Quds Paints · Jordan</div>
-            <div class="country-row">
+            <div class="meta-row">
+              <div class="project-meta">Al Quds Paints · Jordan</div>
               <img
                 src="https://mohammadhdeib.carrd.co/assets/images/image08.png?v=04e134da"
                 alt="Jordan flag"
@@ -235,8 +242,8 @@
               alt="Cemonite facility"
               class="project-image"
             />
-            <div class="project-meta">Cemonite · Norway</div>
-            <div class="country-row">
+            <div class="meta-row">
+              <div class="project-meta">Cemonite · Norway</div>
               <img
                 src="https://mohammadhdeib.carrd.co/assets/images/image22.png?v=04e134da"
                 alt="Norway flag"
@@ -262,8 +269,8 @@
               alt="Team Power Solutions building"
               class="project-image"
             />
-            <div class="project-meta">Team Power Solutions · Canada</div>
-            <div class="country-row">
+            <div class="meta-row">
+              <div class="project-meta">Team Power Solutions · Canada</div>
               <img
                 src="https://mohammadhdeib.carrd.co/assets/images/image23.png?v=04e134da"
                 alt="Canada flag"
