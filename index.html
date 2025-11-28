@@ -2,289 +2,427 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Concrete Batch Plant Automation | Project Profile – Mohammad Hdeab</title>
+  <title>Mohammad Hdeib | Industrial Automation Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Project profile for a complete concrete batch plant automation upgrade delivered by Industrial Automation Engineer Mohammad Hdeab." />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Profile and featured industrial automation projects of Electrical & Industrial Automation Engineer Mohammad Hdeib." />
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card-bg: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border: #e5e7eb;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    h1, h2, h3 {
+      margin: 0 0 8px;
+    }
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 0.02em;
+    }
+    h2 {
+      font-size: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 16px 0;
+    }
+    p {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .pill {
+      font-size: 0.78rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #1e3a8a;
+      white-space: nowrap;
+    }
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 1.15rem;
+      font-size: 0.92rem;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    /* Featured projects */
+    .projects-grid {
+      display: grid;
+      gap: 16px;
+    }
+    @media (min-width: 720px) {
+      .projects-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    .project-card {
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 12px 12px 14px;
+      background: #f9fafb;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .project-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .project-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .project-body {
+      font-size: 0.85rem;
+      flex: 1;
+      margin-bottom: 8px;
+    }
+    .project-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .project-link {
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .project-link:hover {
+      text-decoration: underline;
+    }
+    /* Detailed project blocks */
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .tag {
+      font-size: 0.78rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #f9fafb;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .meta-line {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+    .back-top {
+      font-size: 0.8rem;
+      margin-top: 8px;
+    }
+    .back-top a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .back-top a:hover {
+      text-decoration: underline;
+    }
+    /* Footer / contact */
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.9rem;
+    }
+    .contact-row span.label {
+      font-weight: 500;
+      color: var(--muted);
+      margin-right: 4px;
+    }
+    .contact-row a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact-row a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100">
-  <!-- Top Bar -->
-  <header class="border-b border-slate-800 bg-slate-950/90 backdrop-blur sticky top-0 z-30">
-    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <div class="h-8 w-8 rounded-full bg-emerald-400/20 flex items-center justify-center">
-          <span class="text-emerald-400 text-sm font-semibold">MH</span>
-        </div>
-        <div>
-          <p class="font-semibold leading-tight text-sm">Mohammad Hdeab</p>
-          <p class="text-[11px] text-slate-400">Industrial Automation Engineer</p>
-        </div>
-      </div>
-      <div class="flex items-center gap-3 text-[11px]">
-        <!-- Placeholder link for future main portfolio page -->
-        <a href="/" class="hidden sm:inline text-slate-400 hover:text-emerald-300">
-          Portfolio home (coming soon)
-        </a>
-        <a href="#contact" class="inline-flex px-4 py-1.5 rounded-full bg-emerald-400 text-slate-950 text-xs font-semibold hover:bg-emerald-300 transition">
-          Contact
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero / Project Summary -->
-    <section class="max-w-5xl mx-auto px-4 py-10 md:py-14">
-      <p class="text-[10px] tracking-[0.3em] uppercase text-emerald-400 mb-3">
-        Project Profile
+<body>
+  <div class="page" id="top">
+    <!-- Header / Name -->
+    <section class="card">
+      <div class="section-label">Profile</div>
+      <h1>Mohammad Hdeib</h1>
+      <div class="subtitle">Industrial Automation & Electrical Engineer</div>
+      <p style="font-size:0.92rem;">
+        Experienced in industrial automation, instrumentation, and electrical power quality. I focus on
+        <strong>system integration</strong>, combining control design, PLC/SCADA, and detailed EPLAN engineering to deliver
+        complete solutions for process plants and machinery.
       </p>
-      <h1 class="text-2xl md:text-4xl font-bold mb-3">
-        Concrete Batch Plant – Complete Automation Upgrade
-      </h1>
-      <p class="text-sm md:text-base text-slate-300 max-w-3xl mb-4">
-        Turnkey upgrade of a dry-mix concrete batching plant, covering MCC redesign,
-        full PLC/HMI program, field I/O, and commissioning – with minimal production
-        downtime.
+      <p style="font-size:0.92rem;">
+        My objective is to contribute to teams and companies that value <strong>practical engineering</strong>, clean
+        documentation, and modern automation technologies.
+      </p>
+    </section>
+
+    <!-- Technical skills -->
+    <section class="card">
+      <h2>Technical Skills</h2>
+      <p class="section-label">Core Domains</p>
+      <p>
+        Automation system design · PLC · SCADA · VFD · Power system analysis · Industrial communication protocols ·
+        Low-voltage system design · P&amp;ID interpretation
+      </p>
+      <div class="divider"></div>
+      <p class="section-label">Managerial & Communication</p>
+      <p>
+        Sales & negotiation · Team leadership · Project and product value estimation · Knowledge of Jordanian and
+        Middle East industrial market
+      </p>
+      <div class="divider"></div>
+      <p class="section-label">Software & Tools</p>
+      <p>
+        Microsoft Office · CX-ONE Omron · Sysmac Studio · TIA Portal · EPLAN · AutoCAD · SQL Server · ABB e-Design ·
+        Siemens SIMARIS · Ecodial · RSLogix 5000
+      </p>
+      <div class="pill-row">
+        <span class="pill">PLC / SCADA</span>
+        <span class="pill">EPLAN</span>
+        <span class="pill">TIA Portal</span>
+        <span class="pill">Sysmac Studio</span>
+        <span class="pill">LV Panels</span>
+      </div>
+    </section>
+
+    <!-- Featured projects (summary cards) -->
+    <section class="card">
+      <h2>Featured Projects</h2>
+      <p class="subtitle">
+        A selection of projects showing my work in plant automation, VFD panel design, and manufacturing-ready EPLAN documentation.
       </p>
 
-      <div class="grid md:grid-cols-4 gap-4 text-[12px] mt-6">
-        <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800">
-          <p class="text-slate-500 text-[11px] mb-1">Location</p>
-          <p class="font-semibold">Jordan</p>
-        </div>
-        <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800">
-          <p class="text-slate-500 text-[11px] mb-1">Client</p>
-          <p class="font-semibold">Local concrete producer</p>
-        </div>
-        <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800">
-          <p class="text-slate-500 text-[11px] mb-1">Role</p>
-          <p class="font-semibold">Lead Automation & Electrical Engineer</p>
-        </div>
-        <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800">
-          <p class="text-slate-500 text-[11px] mb-1">Status</p>
-          <p class="font-semibold text-emerald-400">Completed & in operation</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Overview / Objectives -->
-    <section class="border-t border-slate-800 bg-slate-900/40">
-      <div class="max-w-5xl mx-auto px-4 py-10 md:py-12 grid md:grid-cols-3 gap-8">
-        <div>
-          <h2 class="text-lg md:text-xl font-semibold mb-2">Overview</h2>
-          <p class="text-[13px] text-slate-400">
-            What the plant does and why this project was needed.
+      <div class="projects-grid">
+        <!-- Project 1 summary -->
+        <article class="project-card">
+          <div class="section-label" style="margin-bottom:4px;">Process Plant</div>
+          <div class="project-title">Emulsion Paints Plant Automation</div>
+          <div class="project-sub">Complete electrical & control system design</div>
+          <p class="project-body">
+            Designed the full control architecture and electrical panels for a fully automated emulsion paint plant,
+            including remote I/O, network topology, and industrial communication.
           </p>
-        </div>
-        <div class="md:col-span-2 space-y-4 text-sm text-slate-200">
-          <p>
-            The plant is a dry-mix concrete batching facility with multiple aggregate
-            conveyors, weighing belts, cement screws, vibrators, water and admixture
-            dosing, and a mixer. The existing control system was outdated, difficult
-            to maintain, and caused frequent stoppages.
+          <div class="project-meta">
+            Al Quds Paints · Amman, Jordan
+          </div>
+          <a href="#proj-emulsion" class="project-link">View details ↓</a>
+        </article>
+
+        <!-- Project 2 summary -->
+        <article class="project-card">
+          <div class="section-label" style="margin-bottom:4px;">Cement / VRM</div>
+          <div class="project-title">Cemonite Vertical Roller Mill</div>
+          <div class="project-sub">P&amp;ID & VFD panel engineering</div>
+          <p class="project-body">
+            Contributed to a next-generation cement factory with detailed P&amp;ID design and VFD panel engineering,
+            delivering complete packages for manufacturing and construction.
           </p>
-          <p>
-            The goal was to deliver a modern, reliable control system with clear
-            diagnostics, flexible recipe handling, and improved safety – while
-            reusing as much of the existing power infrastructure as practical.
+          <div class="project-meta">
+            Cemonite · Sola, Norway
+          </div>
+          <a href="#proj-vrm" class="project-link">View details ↓</a>
+        </article>
+
+        <!-- Project 3 summary -->
+        <article class="project-card">
+          <div class="section-label" style="margin-bottom:4px;">Field Test</div>
+          <div class="project-title">Feasibility Field Test – Advanced Exploration</div>
+          <div class="project-sub">EPLAN & panel design support</div>
+          <p class="project-body">
+            Supported a Canadian field test project with electrical design based on P&amp;ID and SLD, including
+            EPLAN schematics and 3D Pro Panel modeling.
           </p>
-          <div class="grid sm:grid-cols-2 gap-3 text-[13px]">
-            <div class="rounded-xl bg-slate-950/70 border border-slate-800 p-3">
-              <p class="text-slate-400 text-[11px] mb-1">Objectives</p>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Upgrade PLC/HMI and plant wiring</li>
-                <li>Implement reliable batching/recipe logic</li>
-                <li>Reduce troubleshooting time</li>
-              </ul>
-            </div>
-            <div class="rounded-xl bg-slate-950/70 border border-slate-800 p-3">
-              <p class="text-slate-400 text-[11px] mb-1">Constraints</p>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Limited shutdown window</li>
-                <li>Reuse of some existing motors &amp; cables</li>
-                <li>Keep operation intuitive for existing operators</li>
-              </ul>
-            </div>
+          <div class="project-meta">
+            Team Power Solutions · Saskatchewan, Canada
           </div>
-        </div>
+          <a href="#proj-fieldtest" class="project-link">View details ↓</a>
+        </article>
       </div>
     </section>
 
-    <!-- My Role & Responsibilities -->
-    <section class="max-w-5xl mx-auto px-4 py-10 md:py-12 grid md:grid-cols-3 gap-8">
-      <div>
-        <h2 class="text-lg md:text-xl font-semibold mb-2">My Role</h2>
-        <p class="text-[13px] text-slate-400">
-          End-to-end responsibility from concept to commissioning.
-        </p>
+    <!-- Detailed project: Emulsion Paints -->
+    <section class="card" id="proj-emulsion">
+      <h2>Emulsion Paints Plant Automation</h2>
+      <div class="tag-row">
+        <span class="tag">Process plant</span>
+        <span class="tag">Complete automation design</span>
+        <span class="tag">EPLAN &amp; AutoCAD</span>
       </div>
-      <div class="md:col-span-2">
-        <div class="grid sm:grid-cols-2 gap-4 text-sm text-slate-200">
-          <ul class="space-y-1.5 list-disc list-inside">
-            <li>Defined overall control philosophy &amp; sequences</li>
-            <li>Sized and selected MCC components &amp; protection</li>
-            <li>Designed EPLAN schematics and panel layouts</li>
-            <li>Prepared I/O list, cable schedule, and terminal plans</li>
-          </ul>
-          <ul class="space-y-1.5 list-disc list-inside">
-            <li>Developed PLC program and HMI screens</li>
-            <li>Commissioned drives, interlocks, and safety circuits</li>
-            <li>Performed testing, tuning, and operator training</li>
-            <li>Delivered as-built documentation &amp; reports</li>
-          </ul>
-        </div>
-      </div>
+      <p class="meta-line"><strong>Client:</strong> Al Quds Paints Industry</p>
+      <p class="meta-line"><strong>Location:</strong> Amman, Jordan</p>
+      <p class="meta-line"><strong>Industry:</strong> Chemicals / Paints</p>
+      <p class="meta-line"><strong>Date:</strong> December 2024</p>
+      <div class="divider"></div>
+      <p>
+        Responsible for the complete design and engineering of the industrial automation system for a fully automated
+        emulsion paint plant. This included:
+      </p>
+      <ul>
+        <li>Electrical control panel design: layouts, schematics, power distribution, and component selection.</li>
+        <li>Remote I/O architecture and cabinet layout to optimize wiring and diagnostics.</li>
+        <li>System topology: planning the network structure for field devices, control panels, and supervisory systems.</li>
+        <li>Industrial communication: integration of PROFINET and other protocols (e.g. EtherCAT, Modbus).</li>
+        <li>I/O addressing and mapping for PLCs, remote stations, and field instruments.</li>
+        <li>Component specification for PLCs, VFDs, HMIs, power supplies, relays, and terminal blocks.</li>
+        <li>Design prepared for clean commissioning, troubleshooting, and future expansion.</li>
+      </ul>
+      <p>
+        Worked closely with cross-functional teams (software, commissioning, project management) to deliver a robust
+        and scalable automation solution.
+      </p>
+      <p class="back-top"><a href="#top">↑ Back to top</a></p>
     </section>
 
-    <!-- Technical Stack -->
-    <section class="border-t border-slate-800 bg-slate-900/40">
-      <div class="max-w-5xl mx-auto px-4 py-10 md:py-12 grid md:grid-cols-3 gap-8">
-        <div>
-          <h2 class="text-lg md:text-xl font-semibold mb-2">Technical Stack</h2>
-          <p class="text-[13px] text-slate-400">
-            Main platforms, tools, and hardware used in this project.
-          </p>
-        </div>
-        <div class="md:col-span-2 grid sm:grid-cols-2 gap-4 text-[13px]">
-          <div class="rounded-2xl bg-slate-950/70 border border-slate-800 p-4">
-            <p class="text-emerald-300 text-xs font-semibold mb-2">Control &amp; Software</p>
-            <ul class="space-y-1 list-disc list-inside">
-              <li>Siemens TIA Portal – PLC &amp; HMI</li>
-              <li>Structured control blocks for batching sequences</li>
-              <li>Alarm, event, and recipe management logic</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-slate-950/70 border border-slate-800 p-4">
-            <p class="text-emerald-300 text-xs font-semibold mb-2">Electrical &amp; Panels</p>
-            <ul class="space-y-1 list-disc list-inside">
-              <li>EPLAN Electric P8 – schematics &amp; reports</li>
-              <li>EPLAN Pro Panel – 3D MCC layout</li>
-              <li>LV MCC with motor starters, VFDs, overloads</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-slate-950/70 border border-slate-800 p-4">
-            <p class="text-emerald-300 text-xs font-semibold mb-2">Field Devices</p>
-            <ul class="space-y-1 list-disc list-inside">
-              <li>Load cells for cement &amp; aggregate weighing</li>
-              <li>Level, speed, and position sensors</li>
-              <li>Vibrators, screw conveyors, pumps, mixer drive</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-slate-950/70 border border-slate-800 p-4">
-            <p class="text-emerald-300 text-xs font-semibold mb-2">Documentation</p>
-            <ul class="space-y-1 list-disc list-inside">
-              <li>I/O list, cable list, terminal diagrams</li>
-              <li>SLD excerpts and load calculations</li>
-              <li>Functional descriptions &amp; operator guide</li>
-            </ul>
-          </div>
-        </div>
+    <!-- Detailed project: VRM -->
+    <section class="card" id="proj-vrm">
+      <h2>Cemonite Vertical Roller Mill</h2>
+      <div class="tag-row">
+        <span class="tag">P&amp;ID &amp; process design</span>
+        <span class="tag">VFD control panels</span>
+        <span class="tag">Manufacturing data</span>
       </div>
+      <p class="meta-line"><strong>Client:</strong> Cemonite</p>
+      <p class="meta-line"><strong>Location:</strong> Sola, Norway</p>
+      <p class="meta-line"><strong>Industry:</strong> Cement / Eco-concrete</p>
+      <p class="meta-line"><strong>Date:</strong> June 2023 – December 2023</p>
+      <div class="divider"></div>
+      <p>
+        Supported the development of a pioneering vertical roller mill line for recyclable concrete production by
+        designing detailed P&amp;ID diagrams and electrical documentation.
+      </p>
+      <ul>
+        <li>P&amp;ID design capturing process equipment, instrumentation, valves, sensors, and control loops.</li>
+        <li>Coordinated with mechanical, civil, and process teams to keep electrical design aligned with site works.</li>
+        <li>VFD control panel design: layouts and schematics for multiple drives and auxiliaries.</li>
+        <li>Generated manufacturing-ready data: drilling patterns, terminal plans, and bill of materials.</li>
+        <li>Ensured compliance with process requirements and industrial standards.</li>
+      </ul>
+      <p>
+        The project contributed to Cemonite’s green innovation goals by enabling automated production of eco-friendly
+        building materials.
+      </p>
+      <p class="back-top"><a href="#top">↑ Back to top</a></p>
     </section>
 
-    <!-- Results -->
-    <section class="max-w-5xl mx-auto px-4 py-10 md:py-12 grid md:grid-cols-3 gap-8">
-      <div>
-        <h2 class="text-lg md:text-xl font-semibold mb-2">Results</h2>
-        <p class="text-[13px] text-slate-400">
-          Key outcomes achieved after commissioning.
-        </p>
+    <!-- Detailed project: Field test -->
+    <section class="card" id="proj-fieldtest">
+      <h2>Feasibility Field Test – Advanced Exploration</h2>
+      <div class="tag-row">
+        <span class="tag">Field test system</span>
+        <span class="tag">EPLAN 2022</span>
+        <span class="tag">3D Pro Panel</span>
       </div>
-      <div class="md:col-span-2">
-        <div class="grid sm:grid-cols-2 gap-4 text-sm">
-          <div class="rounded-2xl bg-slate-900/70 border border-slate-800 p-4">
-            <p class="text-slate-400 text-[11px] mb-1">Operational</p>
-            <ul class="space-y-1 list-disc list-inside">
-              <li>More stable batching cycles and reduced rework</li>
-              <li>Faster fault finding via clear alarms &amp; diagnostics</li>
-              <li>Operators can change recipes safely and quickly</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-slate-900/70 border border-slate-800 p-4">
-            <p class="text-slate-400 text-[11px] mb-1">Engineering &amp; Maintenance</p>
-            <ul class="space-y-1 list-disc list-inside">
-              <li>Clean, consistent EPLAN documentation</li>
-              <li>Easier future expansions &amp; modifications</li>
-              <li>Reduced unplanned downtime compared to old system</li>
-            </ul>
-          </div>
-        </div>
-        <p class="text-[12px] text-slate-500 mt-4">
-          Detailed I/O list, EPLAN PDFs, and PLC code excerpts can be shared
-          privately upon request, subject to client NDA.
-        </p>
-      </div>
-    </section>
-
-    <!-- Gallery / Documents (placeholders) -->
-    <section class="border-t border-slate-800 bg-slate-900/40">
-      <div class="max-w-5xl mx-auto px-4 py-10 md:py-12">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="text-lg md:text-xl font-semibold">Screens &amp; Documents</h2>
-          <p class="text-[11px] text-slate-500">Sample images / PDFs can go here.</p>
-        </div>
-        <div class="grid sm:grid-cols-3 gap-4 text-[12px]">
-          <div class="aspect-video rounded-2xl bg-slate-950 border border-dashed border-slate-700 flex items-center justify-center text-slate-500 text-center px-2">
-            HMI main screen (placeholder)
-          </div>
-          <div class="aspect-video rounded-2xl bg-slate-950 border border-dashed border-slate-700 flex items-center justify-center text-slate-500 text-center px-2">
-            EPLAN MCC layout (placeholder)
-          </div>
-          <div class="aspect-video rounded-2xl bg-slate-950 border border-dashed border-slate-700 flex items-center justify-center text-slate-500 text-center px-2">
-            I/O summary / P&amp;ID snippet
-          </div>
-        </div>
-        <p class="text-[11px] text-slate-500 mt-3">
-          Replace these boxes with actual images (JPG/PNG) of your HMI screens,
-          panels, or schematics when you’re ready.
-        </p>
-      </div>
+      <p class="meta-line"><strong>Client:</strong> Team Power Solutions</p>
+      <p class="meta-line"><strong>Location:</strong> Saskatchewan, Canada</p>
+      <p class="meta-line"><strong>Industry:</strong> Engineering Solutions / Exploration</p>
+      <p class="meta-line"><strong>Date:</strong> June 2022</p>
+      <div class="divider"></div>
+      <p>
+        Contributed to the electrical design of a field testing project, supporting advanced exploration systems.
+      </p>
+      <ul>
+        <li>Developed electrical schematics based on project P&amp;ID and single line diagram (SLD).</li>
+        <li>Created EPLAN 2022 schematics aligned with process and power requirements.</li>
+        <li>Prepared custom terminal and connection reports to streamline wiring and field work.</li>
+        <li>Modeled the electrical control panel in 3D using EPLAN Pro Panel.</li>
+        <li>Coordinated with the engineering manager to match documentation with field and internal standards.</li>
+      </ul>
+      <p>
+        The focus was on producing manufacturing-ready designs that connected engineering intent with practical,
+        on-site execution.
+      </p>
+      <p class="back-top"><a href="#top">↑ Back to top</a></p>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="max-w-5xl mx-auto px-4 py-10 md:py-12">
-      <div class="rounded-2xl bg-slate-900/70 border border-slate-800 p-5 md:p-6 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
+    <section class="card">
+      <h2>Contact</h2>
+      <p class="subtitle">Open to remote and international industrial automation projects.</p>
+      <div class="contact-row">
+        <!-- 🔁 Replace with your real info -->
         <div>
-          <h2 class="text-lg md:text-xl font-semibold mb-1">Discuss a similar project</h2>
-          <p class="text-[13px] text-slate-300">
-            If you’re planning a new plant, retrofit, or control system upgrade,
-            I can help with design, programming, and commissioning.
-          </p>
-          <div class="mt-3 space-y-1 text-[13px] text-slate-300">
-            <!-- TODO: replace with your real details -->
-            <p>
-              <span class="text-slate-500">Email:</span>
-              <a href="mailto:YOUR_EMAIL_HERE" class="text-emerald-400 hover:underline">YOUR_EMAIL_HERE</a>
-            </p>
-            <p>
-              <span class="text-slate-500">LinkedIn:</span>
-              <a href="YOUR_LINKEDIN_URL_HERE" class="text-emerald-400 hover:underline">YOUR_LINKEDIN_URL_HERE</a>
-            </p>
-            <p>
-              <span class="text-slate-500">Location:</span>
-              Jordan · Open to remote / international
-            </p>
-          </div>
+          <span class="label">Email:</span>
+          <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a>
         </div>
-        <div class="flex-shrink-0">
-          <a href="mailto:YOUR_EMAIL_HERE" class="inline-flex px-5 py-2.5 rounded-full bg-emerald-400 text-slate-950 text-sm font-semibold hover:bg-emerald-300 transition">
-            Email me about your project
-          </a>
+        <div>
+          <span class="label">LinkedIn:</span>
+          <a href="YOUR_LINKEDIN_URL_HERE">YOUR_LINKEDIN_URL_HERE</a>
+        </div>
+        <div>
+          <span class="label">Location:</span>
+          Jordan · Available for remote work
         </div>
       </div>
+      <div class="footer">
+        This page is a simplified profile. A full multi-project portfolio site can be added later.
+      </div>
     </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="border-t border-slate-800 bg-slate-950">
-    <div class="max-w-5xl mx-auto px-4 py-4 text-[11px] text-slate-500 flex flex-col md:flex-row items-center justify-between gap-2">
-      <p>© <span id="year"></span> Mohammad Hdeab</p>
-      <p>Concrete batch plant automation · Project profile.</p>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  </div>
 </body>
 </html>
