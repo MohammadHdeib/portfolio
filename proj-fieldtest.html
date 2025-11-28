@@ -7,270 +7,321 @@
   <meta name="description" content="Detailed project profile for the Feasibility Field Test engineering work by Industrial Automation Engineer Mohammad Hdeib." />
   <style>
     :root {
-      --bg: #f5f5f7;
-      --card-bg: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --accent: #2563eb;
-      --border: #e5e7eb;
+      --bg-overlay: rgba(10, 18, 28, 0.78);
+      --panel-bg: rgba(15, 23, 42, 0.9);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #f9fafb;
+      --border: rgba(148, 163, 184, 0.4);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      background: var(--bg);
       color: var(--text);
+      background:
+        linear-gradient(to bottom right, rgba(15,23,42,0.9), rgba(30,64,175,0.4)),
+        url("https://mohammadhdeib.carrd.co/assets/images/image00.jpg?v=04e134da")
+        center/cover fixed no-repeat;
     }
     .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 24px 16px 48px;
+      min-height: 100vh;
+      padding: 40px 16px 56px;
+      background: linear-gradient(to bottom, var(--bg-overlay), rgba(15,23,42,0.9));
+      display: flex;
+      justify-content: center;
+    }
+    .panel {
+      width: 100%;
+      max-width: 1080px;
+      background: var(--panel-bg);
+      border-radius: 18px;
+      border: 1px solid rgba(15,23,42,0.9);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+      padding: 28px 22px 34px;
     }
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 12px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
     header h1 {
       margin: 0;
-      font-size: 1.5rem;
-    }
-    header a {
-      font-size: 0.85rem;
-      color: var(--accent);
-      text-decoration: none;
-    }
-    header a:hover { text-decoration: underline; }
-
-    .section-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.18em;
+      font-size: 0.95rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 4px;
     }
-    h2 {
-      margin: 0 0 6px;
-      font-size: 1.4rem;
+    header a { font-size: 0.85rem; color: var(--accent); text-decoration: none; }
+    header a:hover { text-decoration: underline; }
+
+    .title-block { text-align: center; margin-bottom: 18px; }
+    .title-block h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
     }
-    .subtitle {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-    .meta-line {
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 2px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-    .flag {
-      width: 18px;
-      height: 18px;
+    .title-underline {
+      width: 60px;
+      height: 2px;
+      background: rgba(248, 250, 252, 0.8);
+      margin: 10px auto 0;
       border-radius: 999px;
+    }
+
+    .hero {
+      width: 100%;
+      border-radius: 18px;
       object-fit: cover;
+      max-height: 320px;
+      border: 1px solid rgba(15,23,42,0.7);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.65);
+      margin-bottom: 22px;
     }
-    .tag-row {
+
+    .info-row {
       display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      margin-bottom: 24px;
       flex-wrap: wrap;
-      gap: 6px;
-      margin: 10px 0 12px;
     }
-    .tag {
-      font-size: 0.78rem;
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: #f9fafb;
-      color: var(--muted);
-      white-space: nowrap;
+    .info-left {
+      flex: 1.2;
+      min-width: 240px;
+      font-size: 0.93rem;
+      color: var(--text);
+      line-height: 1.6;
     }
+    .info-left span.label {
+      font-weight: 600;
+      display: inline-block;
+      min-width: 80px;
+    }
+    .info-right {
+      flex: 1;
+      min-width: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo-img {
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 14px;
+      background: rgba(15,23,42,0.7);
+      padding: 10px 14px;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.6);
+    }
+
     .divider {
       height: 1px;
-      background: var(--border);
-      margin: 16px 0;
+      background: rgba(148,163,184,0.35);
+      margin: 14px 0 18px;
     }
+
     p {
       margin: 0 0 10px;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
+      color: var(--muted);
       line-height: 1.7;
     }
     ul {
-      margin: 0 0 10px 1.2rem;
+      margin: 0 0 10px 1.1rem;
       padding: 0;
-      font-size: 0.93rem;
+      font-size: 0.9rem;
+      color: var(--muted);
     }
     li { margin-bottom: 4px; }
 
-    .hero-image {
-      width: 100%;
-      border-radius: 16px;
-      object-fit: cover;
-      border: 1px solid var(--border);
-      margin: 10px 0 16px;
-      max-height: 260px;
+    .gallery-title {
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
     }
-
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 10px;
     }
-    .gallery img {
+    .thumb {
+      flex: 1 1 130px;
+      max-width: 180px;
       border-radius: 10px;
-      border: 1px solid var(--border);
-      max-width: 100%;
-      height: auto;
-      flex: 1 1 150px;
+      border: 1px solid rgba(148,163,184,0.5);
+      height: 80px;
       object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .thumb:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      border-color: rgba(248,250,252,0.8);
     }
 
     .back-home {
       margin-top: 18px;
       font-size: 0.9rem;
     }
-    .back-home a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+    .back-home a { color: var(--accent); text-decoration: none; }
     .back-home a:hover { text-decoration: underline; }
 
     .contact {
       margin-top: 28px;
       padding-top: 18px;
-      border-top: 1px solid var(--border);
-      font-size: 0.93rem;
+      border-top: 1px solid rgba(148,163,184,0.35);
+      font-size: 0.9rem;
+      color: var(--muted);
     }
     .contact-row {
       display: flex;
       flex-direction: column;
       gap: 4px;
     }
-    .contact-row span.label {
-      font-weight: 500;
-      color: var(--muted);
-      margin-right: 4px;
-    }
-    .contact-row a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+    .contact-row .label { font-weight: 500; color: var(--muted); }
+    .contact-row a { color: var(--accent); text-decoration: none; }
     .contact-row a:hover { text-decoration: underline; }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-content {
+      max-width: 90vw;
+      max-height: 90vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-image {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 14px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.9);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: -36px;
+      right: 0;
+      font-size: 1.8rem;
+      color: #f9fafb;
+      cursor: pointer;
+    }
+    .lightbox-nav {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+    .lightbox-arrow {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.75);
+      border: 1px solid rgba(148,163,184,0.7);
+      color: #e5e7eb;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      pointer-events: auto;
+      user-select: none;
+    }
+    .lightbox-arrow:hover { background: rgba(31,41,55,0.95); }
+
+    @media (max-width: 768px) {
+      .panel { padding: 24px 16px 28px; }
+      .title-block h2 { font-size: 1.35rem; letter-spacing: 0.16em; }
+      .info-row { flex-direction: column; }
+      .info-right { justify-content: flex-start; }
+      .hero { max-height: 260px; }
+    }
   </style>
 </head>
 <body>
   <div class="page">
-    <!-- Top back link -->
-    <header>
-      <h1>Project Details</h1>
-      <a href="index.html">← Back to main profile</a>
-    </header>
+    <div class="panel">
+      <header>
+        <h1>Project Details</h1>
+        <a href="index.html">← Back to main profile</a>
+      </header>
 
-    <!-- Project content -->
-    <section>
-      <div class="section-label">Field Test</div>
-      <h2>Feasibility Field Test – Advanced Exploration</h2>
-      <div class="subtitle">
-        EPLAN and 3D Pro Panel design for an advanced exploration field testing system.
-      </div>
+      <section>
+        <div class="title-block">
+          <h2>Feasibility Field Test – Advanced Exploration</h2>
+          <div class="title-underline"></div>
+        </div>
 
-      <img
-        src="https://mohammadhdeib.carrd.co/assets/images/image05.jpg?v=04e134da"
-        alt="Team Power Solutions building"
-        class="hero-image"
-      />
-
-      <div class="tag-row">
-        <span class="tag">Field test system</span>
-        <span class="tag">EPLAN 2022</span>
-        <span class="tag">3D Pro Panel</span>
-      </div>
-
-      <p class="meta-line"><strong>Client:</strong> Team Power Solutions</p>
-      <p class="meta-line">
-        <strong>Location:</strong> Saskatchewan, Canada
         <img
-          src="https://mohammadhdeib.carrd.co/assets/images/image23.png?v=04e134da"
-          alt="Canada flag"
-          class="flag"
+          src="https://mohammadhdeib.carrd.co/assets/images/image04.jpg?v=04e134da"
+          alt="Field test site"
+          class="hero"
         />
-      </p>
-      <p class="meta-line"><strong>Industry:</strong> Engineering Solutions / Exploration</p>
-      <p class="meta-line"><strong>Date:</strong> June 2022</p>
 
-      <div class="divider"></div>
-
-      <p>
-        For this feasibility field test project, I supported the electrical design of a system used for advanced
-        exploration activities. The focus was on producing clear EPLAN documentation and a 3D panel model that
-        translated engineering intent into something practical for construction and field work.
-      </p>
-
-      <p><strong>Key tasks and responsibilities:</strong></p>
-      <ul>
-        <li>
-          Developed electrical schematics based on project P&amp;ID and Single Line Diagram (SLD) provided by the
-          engineering team.
-        </li>
-        <li>
-          Created EPLAN 2022 schematics aligned with process and power requirements, including detailed device and
-          connection data.
-        </li>
-        <li>
-          Prepared custom terminal and connection reports to streamline panel wiring and field terminations.
-        </li>
-        <li>
-          Modeled the electrical control panel in 3D using EPLAN Pro Panel to validate space, routing, and assembly.
-        </li>
-        <li>
-          Coordinated with the engineering manager to ensure documentation matched internal standards and field
-          realities.
-        </li>
-      </ul>
-
-      <p>
-        The deliverables were aimed at reducing uncertainty in the field, ensuring that installers and technicians
-        had a clear, consistent reference during build and commissioning.
-      </p>
-
-      <div class="divider"></div>
-
-      <p><strong>Selected visuals from the project:</strong></p>
-      <div class="gallery">
-        <img src="https://mohammadhdeib.carrd.co/assets/images/image04.jpg?v=04e134da" alt="Field test site landscape" />
-        <img src="https://mohammadhdeib.carrd.co/assets/images/image05.jpg?v=04e134da" alt="Team Power Solutions building" />
-        <img src="https://mohammadhdeib.carrd.co/assets/images/image24.png?v=04e134da" alt="Team Power Solutions logo" />
-      </div>
-
-      <div class="back-home">
-        ← <a href="index.html">Back to main profile</a>
-      </div>
-
-      <div class="contact">
-        <h3>Contact</h3>
-        <p class="subtitle">Open to similar field test and specialized panel design projects.</p>
-        <div class="contact-row">
-          <div>
-            <span class="label">Email:</span>
-            <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a>
+        <div class="info-row">
+          <div class="info-left">
+            <div><span class="label">Client:</span> Team Power Solutions</div>
+            <div><span class="label">Location:</span> Saskatchewan, Canada</div>
+            <div><span class="label">Industry:</span> Engineering Solutions</div>
+            <div><span class="label">Date:</span> June, 2022</div>
           </div>
-          <div>
-            <span class="label">LinkedIn:</span>
-            <a href="YOUR_LINKEDIN_URL_HERE">YOUR_LINKEDIN_URL_HERE</a>
-          </div>
-          <div>
-            <span class="label">Location:</span>
-            Jordan · Available for remote and international projects
+          <div class="info-right">
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image24.png?v=04e134da"
+              alt="Team Power Solutions logo"
+              class="logo-img"
+            />
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-</body>
-</html>
+
+        <div class="divider"></div>
+
+        <p>
+          For this feasibility field test project, I supported the electrical design of a system used for advanced
+          exploration activities. The focus was on producing clear EPLAN documentation and a 3D panel model that
+          translated engineering intent into something practical for construction and field work.
+        </p>
+
+        <p><strong>Key tasks and responsibilities:</strong></p>
+        <ul>
+          <li>Developed electrical schematics based on P&amp;ID and Single Line Diagram (SLD).</li>
+          <li>Created EPLAN 2022 schematics aligned with process and power requirements.</li>
+          <li>Prepared custom terminal and connection reports to streamline wiring.</li>
+          <li>Modeled the control panel in 3D using EPLAN Pro Panel.</li>
+          <li>Coordinated with the engineering manager to match internal standards and field realities.</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <div class="gallery-title">Project Gallery</div>
+        <div class="gallery">
+          <img src="https://mohammadhdeib.carrd.co/assets/images/image04.jpg?v=04e134da" class="thumb" data-group="fieldtest" />
+          <img src="https://mohammadhdeib.carrd.co/assets/images/image05.jpg?v=04e134da" class="thumb" data-group="fieldtest" />
+          <img src="https://mohammadhdeib.carrd.co/assets/images/image24.png?v=04e134da" class="thumb" data-group="fieldtest" />
+        </div>
+
+        <div class="back-home">
+          ← <a href="index.html">Back to main profile</a>
+        </div>
+
+        <div class="contact">
+          <h3>Contact</h3>
+          <p class="subtitle">Open to similar field test and specialized panel design projects.</p>
