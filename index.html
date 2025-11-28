@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --panel-bg: rgba(15, 23, 42, 0.82);
+      --panel-bg: rgba(15, 23, 42, 0.9);
       --text: #e5e7eb;
       --muted: #9ca3af;
       --accent: #f9fafb;
@@ -15,50 +15,48 @@
 
     * { box-sizing: border-box; }
 
-    /* ================================
-       GLOBAL BACKGROUND (YOUR NEW IMAGE)
-    ================================= */
+    /* ===== PAGE BACKGROUND (your desk photo) ===== */
     body {
       margin: 0;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
       color: var(--text);
       font-size: 17px;
 
-      /* Dark overlay + your image */
       background:
         linear-gradient(
-          rgba(15, 23, 42, 0.45),
-          rgba(15, 23, 42, 0.45)
+          rgba(15, 23, 42, 0.35),
+          rgba(15, 23, 42, 0.35)
         ),
-        url("assets/desk-bg.jpg") center/cover fixed no-repeat;
+        url("desk-bg.jpg") center/cover fixed no-repeat;
     }
 
-    /* MAIN WRAPPER */
+    /* ===== MAIN WRAPPER ===== */
     .page {
       min-height: 100vh;
       padding: 40px 16px 56px;
       display: flex;
       justify-content: center;
+      background: none; /* don't hide the photo */
     }
 
-    /* CENTRAL DARK PANEL */
+    /* ===== CENTRAL PANEL ===== */
     .panel {
       width: 100%;
       max-width: 1080px;
       background: var(--panel-bg);
-      border-radius: 18px;
-      box-shadow: 0 26px 70px rgba(0,0,0,0.45);
+      border-radius: 20px;
+      box-shadow: 0 26px 70px rgba(0,0,0,0.55);
       padding: 32px 24px 36px;
     }
 
-    /* HEADER */
+    /* ===== HEADER ===== */
     .panel-header {
       text-align: center;
       margin-bottom: 32px;
     }
     .panel-header h1 {
       margin: 0 0 6px;
-      font-size: 2.1rem;
+      font-size: 2.2rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
@@ -70,7 +68,7 @@
       border-radius: 999px;
     }
 
-    /* PROJECTS GRID */
+    /* ===== PROJECT LIST ===== */
     .projects {
       display: flex;
       flex-direction: column;
@@ -79,7 +77,7 @@
 
     .project-row {
       display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
       gap: 24px;
       align-items: center;
       padding: 18px 0;
@@ -89,7 +87,7 @@
       border-top: none;
     }
 
-    /* LEFT COLUMN */
+    /* Left column */
     .project-title {
       font-size: 1.1rem;
       letter-spacing: 0.18em;
@@ -101,7 +99,7 @@
       color: var(--muted);
       margin-bottom: 20px;
       max-width: 480px;
-      line-height: 1.55;
+      line-height: 1.6;
     }
     .project-button {
       display: inline-flex;
@@ -122,7 +120,7 @@
       transform: translateY(-1px);
     }
 
-    /* RIGHT COLUMN */
+    /* Right column */
     .project-right {
       display: flex;
       flex-direction: column;
@@ -137,7 +135,6 @@
       border: 1px solid rgba(15,23,42,0.7);
       box-shadow: 0 14px 35px rgba(0,0,0,0.45);
     }
-
     .meta-row {
       display: flex;
       align-items: center;
@@ -150,7 +147,6 @@
       color: var(--muted);
       white-space: nowrap;
     }
-
     .flag {
       width: 46px;
       height: 46px;
@@ -159,7 +155,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
 
-    /* FOOTER */
+    /* ===== FOOTER ===== */
     .contact {
       margin-top: 40px;
       padding-top: 18px;
@@ -176,21 +172,23 @@
       text-decoration: none;
     }
 
-    /* MOBILE FIX */
+    /* ===== MOBILE ===== */
     @media (max-width: 820px) {
+      body {
+        background-attachment: scroll; /* smoother on phones */
+      }
+      .panel {
+        padding: 24px 16px 28px;
+      }
       .project-row {
         grid-template-columns: 1fr;
       }
       .project-right {
-        order: -1;
-      }
-      body {
-        background-attachment: scroll;
+        order: -1; /* image above text on mobile */
       }
     }
   </style>
 </head>
-
 <body>
   <div class="page">
     <div class="panel">
@@ -202,7 +200,7 @@
 
       <section class="projects">
 
-        <!-- PROJECT 1 -->
+        <!-- Project 1 -->
         <article class="project-row">
           <div>
             <div class="project-title">Emulation Paints Plant Automation</div>
@@ -211,17 +209,24 @@
             </div>
             <a href="proj-emulsion.html" class="project-button">More</a>
           </div>
-
           <div class="project-right">
-            <img src="https://mohammadhdeib.carrd.co/assets/images/image01.jpg?v=04e134da" class="project-image">
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image01.jpg?v=04e134da"
+              alt="Al Quds Paints plant"
+              class="project-image"
+            />
             <div class="meta-row">
               <div class="project-meta">Al Quds Paints · Jordan</div>
-              <img src="https://mohammadhdeib.carrd.co/assets/images/image08.png?v=04e134da" class="flag">
+              <img
+                src="https://mohammadhdeib.carrd.co/assets/images/image08.png?v=04e134da"
+                alt="Jordan flag"
+                class="flag"
+              />
             </div>
           </div>
         </article>
 
-        <!-- PROJECT 2 -->
+        <!-- Project 2 -->
         <article class="project-row">
           <div>
             <div class="project-title">Cemonite Vertical Roller Mill</div>
@@ -230,31 +235,45 @@
             </div>
             <a href="proj-vrm.html" class="project-button">More</a>
           </div>
-
           <div class="project-right">
-            <img src="https://mohammadhdeib.carrd.co/assets/images/image02.jpg?v=04e134da" class="project-image">
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image02.jpg?v=04e134da"
+              alt="Cemonite plant"
+              class="project-image"
+            />
             <div class="meta-row">
               <div class="project-meta">Cemonite · Norway</div>
-              <img src="https://mohammadhdeib.carrd.co/assets/images/image22.png?v=04e134da" class="flag">
+              <img
+                src="https://mohammadhdeib.carrd.co/assets/images/image22.png?v=04e134da"
+                alt="Norway flag"
+                class="flag"
+              />
             </div>
           </div>
         </article>
 
-        <!-- PROJECT 3 -->
+        <!-- Project 3 -->
         <article class="project-row">
           <div>
             <div class="project-title">Feasibility Field Test – Advanced Exploration</div>
             <div class="project-desc">
-              EPLAN & 3D Pro Panel design for an advanced field testing system.
+              EPLAN &amp; 3D Pro Panel design for an advanced exploration field testing system.
             </div>
             <a href="proj-fieldtest.html" class="project-button">More</a>
           </div>
-
           <div class="project-right">
-            <img src="https://mohammadhdeib.carrd.co/assets/images/image05.jpg?v=04e134da" class="project-image">
+            <img
+              src="https://mohammadhdeib.carrd.co/assets/images/image05.jpg?v=04e134da"
+              alt="Field test site"
+              class="project-image"
+            />
             <div class="meta-row">
               <div class="project-meta">Team Power Solutions · Canada</div>
-              <img src="https://mohammadhdeib.carrd.co/assets/images/image23.png?v=04e134da" class="flag">
+              <img
+                src="https://mohammadhdeib.carrd.co/assets/images/image23.png?v=04e134da"
+                alt="Canada flag"
+                class="flag"
+              />
             </div>
           </div>
         </article>
@@ -263,8 +282,8 @@
 
       <footer class="contact">
         <span>📧 <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a></span>
-        <span>🔗 <a href="#">YOUR_LINKEDIN_URL_HERE</a></span>
-        <span>📍 Jordan · Open to global projects</span>
+        <span>🔗 <a href="YOUR_LINKEDIN_URL_HERE">YOUR_LINKEDIN_URL_HERE</a></span>
+        <span>📍 Jordan · Open to remote and international projects</span>
       </footer>
 
     </div>
