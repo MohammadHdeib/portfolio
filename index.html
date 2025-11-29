@@ -12,7 +12,7 @@
 
   <style>
     :root {
-      /* Your new panel color */
+      /* Panel color you chose */
       --panel-bg: rgba(37, 150, 190, 0.7);
       --text: #ffffff;
       --muted: #dfe8ff;
@@ -27,7 +27,6 @@
       margin: 0;
       font-family: "Raleway", sans-serif;
       color: var(--text);
-
       background:
         linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
         url("desk-bg.jpg") center/cover fixed no-repeat;
@@ -169,19 +168,28 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .detail-header {
+    /* NEW: detail header layout (Carrd-style) */
+    .detail-back-row {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 30px;
+      justify-content: flex-start;
+      margin-bottom: 10px;
     }
 
     .detail-title {
       font-size: 1.4rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      margin: 0;
+      text-align: center;
+      margin: 18px 0 6px;
+      color: white;
+    }
+
+    .detail-underline {
+      width: 70px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50px;
+      margin: 0 auto 24px;
     }
 
     .detail-main-img {
@@ -273,10 +281,8 @@
       }
       .project-right { order: -1; }
 
-      .detail-header {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        gap: 16px;
+      .detail-back-row {
+        margin-bottom: 6px;
       }
     }
   </style>
@@ -361,10 +367,12 @@
            PROJECT DETAIL: EMULSION
            ========================= -->
       <div id="project-emulsion" class="project-detail">
-        <div class="detail-header">
-          <h2 class="detail-title">Emulsion Paints Plant Automation</h2>
+        <div class="detail-back-row">
           <button class="button" onclick="goHome()">Back</button>
         </div>
+
+        <h2 class="detail-title">EMULATION PAINTS PLANT AUTOMATION</h2>
+        <div class="detail-underline"></div>
 
         <img id="emulsion-main-img"
              src="https://mohammadhdeib.carrd.co/assets/images/image01.jpg?v=04e134da"
@@ -432,10 +440,12 @@
            PROJECT DETAIL: VRM
            ========================= -->
       <div id="project-vrm" class="project-detail">
-        <div class="detail-header">
-          <h2 class="detail-title">Cemonite Vertical Roller Mill</h2>
+        <div class="detail-back-row">
           <button class="button" onclick="goHome()">Back</button>
         </div>
+
+        <h2 class="detail-title">CEMONITE VERTICAL ROLLER MILL</h2>
+        <div class="detail-underline"></div>
 
         <img id="vrm-main-img"
              src="https://mohammadhdeib.carrd.co/assets/images/image02.jpg?v=04e134da"
@@ -502,10 +512,12 @@
            PROJECT DETAIL: FIELD TEST
            ========================= -->
       <div id="project-fieldtest" class="project-detail">
-        <div class="detail-header">
-          <h2 class="detail-title">Feasibility Field Test — Advanced Exploration</h2>
+        <div class="detail-back-row">
           <button class="button" onclick="goHome()">Back</button>
         </div>
+
+        <h2 class="detail-title">FEASIBILITY FIELD TEST – ADVANCED EXPLORATION</h2>
+        <div class="detail-underline"></div>
 
         <img id="field-main-img"
              src="https://mohammadhdeib.carrd.co/assets/images/image05.jpg?v=04e134da"
